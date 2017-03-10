@@ -52,7 +52,7 @@ var runAjax = function(link){
 
 	if(userVal !== ''){
 		button.push(userVal);
-		var link = "http://api.giphy.com/v1/gifs/search?q=" + userVal + "&api_key=dc6zaTOxFJmzC";
+		var link = "https://api.giphy.com/v1/gifs/search?q=" + userVal + "&api_key=dc6zaTOxFJmzC";
 
 runAjax(link);
 
@@ -69,7 +69,7 @@ runAjax(link);
 	$('.buttonContainer').on('click', 'button', function(){
 
 		var buttonVal = $(this).attr('data-name');
-		link = "http://api.giphy.com/v1/gifs/search?q=" + buttonVal + "&api_key=dc6zaTOxFJmzC";
+		link = "https://api.giphy.com/v1/gifs/search?q=" + buttonVal + "&api_key=dc6zaTOxFJmzC";
 
 runAjax(link);
 	});
