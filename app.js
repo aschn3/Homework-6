@@ -1,6 +1,6 @@
 
 
-var buttons = ['Lexus LFA', 'Acura NSX', 'Toyota Supra', 'Nissan Skyline'];
+var buttons = ['Acura NSX', 'Lexus LFA', 'Toyota Supra', 'Nissan Skyline'];
 
 var addButtons = function (){
 
@@ -20,6 +20,33 @@ var addButtons = function (){
 
 addButtons();
 
+// function renderButtons(){
+
+//$("#car-view").empty();
+
+//for (var i = 0; i < buttons.length; i++) {
+
+	//var a =$("<button");
+
+	//a.addClass("car");
+
+	//a.attr("data-name", buttons[i]);
+
+	//$("#car-view").append(a);
+//}
+//}
+	//$("#add-car").on("click", function(event){
+
+		//event.preventDefault();
+
+		//var car = $("car-input").val().trim();
+
+		//buttons.push(car):
+
+		//renderButtons();
+	//});
+
+
 var runAjax = function(link){
 
 	$('.images').empty();
@@ -27,8 +54,10 @@ var runAjax = function(link){
 	$.ajax({ url: link, method: "GET"})
 	.done(function(response){
 
+		var results = response.data;
 
-		for(var i = 0; i < 8; i++){
+
+		for(var i = 0; i < 10; i++){
 			var image = $("<img>");
 
 			image.attr({
@@ -38,6 +67,15 @@ var runAjax = function(link){
 				"data-name": 'still'
 			});
 
+			 if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+
+			 	var gifDiv = $("<div class='item'>");
+
+			 	var rating = results[i].rating;
+
+			 	var p = $("<p>").text("Rating: " + rating);
+
+}
 	$('.images').append(image);
 
 		}

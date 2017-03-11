@@ -51,7 +51,7 @@ button{
 }
 
 button:hover{
-	background: green;
+	background: blue;
 	color: #fff;
 
 }
@@ -66,7 +66,6 @@ button:hover{
 }
 
 .images, .info{
-	/*background:red;*/
 	margin: 10px;
 }
 
@@ -114,7 +113,7 @@ img{
 
 }
 
-.animal-container{
+.car-container{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -163,7 +162,7 @@ img{
 }
 
 footer{
-	position: relative;
+	position: margin-bottom;
 	bottom: 0;
 	width: 100px;
 	height: 100px;
